@@ -42,6 +42,14 @@ nix config check
 nix flake update
 sudo nixos-rebuild switch --flake .#nixos
 ```
+```sh
+# java dev env
+nix develop .#java
+```sh
+# python dev env
+nix develop .#python
+```
+```
 
 ## references
 - https://determinate.systems/posts/declarative-gnome-configuration-with-nixos/
