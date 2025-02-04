@@ -1,0 +1,54 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Rebuild Configuration (Flake)",
+            "type": "shell",
+            "command": "sudo nixos-rebuild switch --flake .#nixos",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Rebuild and apply the current NixOS configuration using flakes."
+        },
+        {
+            "label": "Update Nix Channels",
+            "type": "shell",
+            "command": "sudo nix-channel --update",
+            "problemMatcher": [],
+            "detail": "Update Nix channels to fetch the latest package updates."
+        },
+        {
+            "label": "Garbage Collect",
+            "type": "shell",
+            "command": "sudo nix-collect-garbage -d",
+            "problemMatcher": [],
+            "detail": "Remove old generations and clean up unused packages."
+        },
+        {
+            "label": "Check Configuration (Flake)",
+            "type": "shell",
+            "command": "nixos-rebuild build --flake .#nixos",
+            "problemMatcher": [],
+            "detail": "Check the current NixOS flake configuration without applying changes."
+        },
+        {
+            "label": "Rollback",
+            "type": "shell",
+            "command": "sudo nixos-rebuild switch --rollback",
+            "problemMatcher": [],
+            "detail": "Rollback to the previous working configuration."
+        },
+        {
+            "label": "update",
+            "type": "shell",
+            "command": "sudo nix flake update",
+            "problemMatcher": [],
+            "detail": "Update nixos packages",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        }
+    ]
+}
