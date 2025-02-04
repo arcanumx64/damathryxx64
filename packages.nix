@@ -15,5 +15,6 @@
     tree
     unzip
     libreoffice-qt6-fresh
+    ollama
   ];
 }
