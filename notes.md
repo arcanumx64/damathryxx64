@@ -3,10 +3,10 @@
 nix config show | grep experimental-features
 ```
 ```sh
-nix flake show "github:arcanumx64/damathryxx64=nix"
+nix flake show "github:arcanumx64/damathryxx64"
 ```
 ```sh
-sudo nixos-rebuild switch --flake "github:arcanumx64/damathryxx64=nix#nixos"
+sudo nixos-rebuild switch --flake "github:arcanumx64/damathryxx64#nixos"
 ```
 ```sh
 sudo nix-collect-garbage -d
@@ -57,3 +57,4 @@ nix develop .#python
 - https://help.gnome.org/users/gnome-help/stable/shell-keyboard-shortcuts.html.en
 - https://help.gnome.org/users/
 - https://nix.dev/manual/nix/2.18/introduction
+- https://dev.to/arnu515/getting-started-with-nix-and-nix-flakes-mml
