@@ -1,4 +1,4 @@
-## Nix commands
+## Nix commands & References 
 ```sh
 nix config show | grep experimental-features
 ```
