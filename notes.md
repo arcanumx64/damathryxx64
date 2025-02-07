@@ -1,4 +1,4 @@
-## Nix commands & References 
+## Nix commands & References
 ```sh
 nix config show | grep experimental-features
 ```
@@ -45,6 +45,7 @@ sudo nixos-rebuild switch --flake .#nixos
 ```sh
 # java dev env
 nix develop .#java
+```
 ```sh
 # python dev env
 nix develop .#python
