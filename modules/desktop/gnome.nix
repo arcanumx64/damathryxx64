@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+
+  fonts.fontconfig.enable = true;
   services.xserver = {
     enable = true;
 

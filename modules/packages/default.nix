@@ -22,5 +22,6 @@
     gnome-tweaks
     autorandr
     openssl
+    cascadia-code
   ];
 }

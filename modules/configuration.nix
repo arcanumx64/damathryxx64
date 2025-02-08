@@ -2,9 +2,10 @@
 
 {
   imports = [
-    ./hardware
     ./desktop
-    ./base_packages.nix
+    ./hardware
+    ./packages
+    ./shells
   ];
 
   networking = {
