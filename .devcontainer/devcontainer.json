@@ -1,5 +1,24 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-docker-compose
 {
-    "name": "nix-shells"
+    "name": "nix-shells",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "editorconfig.editorconfig",
+                "github.vscode-pull-request-github",
+                "ms-vscode.vscode-github-issue-notebooks",
+                "ms-vscode.extension-test-runner",
+                "jrieken.vscode-pr-pinger",
+                "bbenoist.nix",
+                "davidanson.vscode-markdownlint",
+                "tal7aouy.icons",
+                "tal7aouy.indent-colorizer",
+                "tal7aouy.theme",
+                "ms-vscode-remote.remote-containers",
+                "gruntfuggly.todo-tree"
+            ]
+        }
+    }
 }

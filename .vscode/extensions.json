@@ -12,6 +12,8 @@
         "davidanson.vscode-markdownlint",
         "tal7aouy.icons",
         "tal7aouy.indent-colorizer",
-        "tal7aouy.theme"
+        "tal7aouy.theme",
+        "ms-vscode-remote.remote-containers",
+        "gruntfuggly.todo-tree"
     ]
 }
