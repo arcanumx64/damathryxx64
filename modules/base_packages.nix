@@ -16,5 +16,11 @@
     unzip
     libreoffice-qt6-fresh
     ollama
+    mutter
+    gnomeExtensions.display-scale-switcher
+    gnomeExtensions.hot-edge
+    gnome-tweaks
+    autorandr
+    openssl
   ];
 }

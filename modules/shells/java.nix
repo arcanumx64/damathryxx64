@@ -2,29 +2,23 @@
 { pkgs ? import <nixpkgs> {} }:
 
 {
-  # Development environment configuration
   devShell = pkgs.mkShell {
     buildInputs = with pkgs; [
       # JDK 21 (Latest LTS version) as of Feb 6th 2025
       jdk21
 
-      # Build tools
       maven
       gradle
 
-      # Development tools
-      jdt-language-server  # Java language server
+      jdt-language-server
 
-      # Misc tools
-      visualvm            # JVM monitoring
-      jmeter             # Performance testing
+      visualvm
+      jmeter
 
-      # Code quality tools
       checkstyle
       pmd
     ];
 
-    # Environment variables
     shellHook = ''
       export JAVA_HOME=${pkgs.jdk21}/lib/openjdk
       export MAVEN_OPTS="-Xmx2048m"
