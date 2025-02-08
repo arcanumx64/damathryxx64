@@ -8,6 +8,10 @@
         "ms-vscode.vscode-github-issue-notebooks",
         "ms-vscode.extension-test-runner",
         "jrieken.vscode-pr-pinger",
-        "bbenoist.nix"
+        "bbenoist.nix",
+        "davidanson.vscode-markdownlint",
+        "tal7aouy.icons",
+        "tal7aouy.indent-colorizer",
+        "tal7aouy.theme"
     ]
 }
