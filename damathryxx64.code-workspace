@@ -1,58 +1,60 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace",
-		"editor.fontLigatures": true,
-		"files.autoSave": "onWindowChange",
-		"editor.renderWhitespace": "trailing",
-		"editor.cursorStyle": "underline",
-		"editor.wordWrap": "wordWrapColumn",
-		"explorer.excludeGitIgnore": true,
-		"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-		"editor.codeLensFontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace",
-		"editor.formatOnPaste": true,
-		"diffEditor.codeLens": true,
-		"diffEditor.wordWrap": "inherit",
-		"editor.minimap.autohide": true,
-		"editor.renderControlCharacters": true,
-		"files.autoGuessEncoding": true,
-		"files.autoSaveWorkspaceFilesOnly": true,
-		"files.eol": "\n",
-		"files.trimTrailingWhitespace": true,
-		"editor.renderFinalNewline": "on",
-		"workbench.startupEditor": "none",
-		"git.autofetch": true,
-		"editor.autoClosingBrackets": "languageDefined",
-		"editor.fontVariations": true,
-		"git.suggestSmartCommit": false,
-				"nix.serverSettings": {
-					"nixd": {
-						"formatting": {
-							"command": [
-								"alejandra"
-							]
-						},
-						"options": {
-							"nixos": {
-								"expr": "(builtins.getFlake \"/home/damathryxx64/damathryxx64/flake.nix\").nixosConfigurations.nixos.options"
-							}
-						}
-					}
-				},
-		"[nix]": {
-			"editor.defaultFormatter": "kamadorueda.alejandra",
-			"editor.formatOnPaste": true,
-			"editor.formatOnSave": true,
-			"editor.formatOnType": false,
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace",
+        "editor.fontLigatures": true,
+        "files.autoSave": "onWindowChange",
+        "editor.renderWhitespace": "trailing",
+        "editor.cursorStyle": "underline",
+        "editor.wordWrap": "wordWrapColumn",
+        "explorer.excludeGitIgnore": true,
+        "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+        "editor.codeLensFontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace",
+        "editor.formatOnPaste": true,
+        "diffEditor.codeLens": true,
+        "diffEditor.wordWrap": "inherit",
+        "editor.minimap.autohide": true,
+        "editor.renderControlCharacters": true,
+        "files.autoGuessEncoding": true,
+        "files.autoSaveWorkspaceFilesOnly": true,
+        "files.eol": "\n",
+        "files.trimTrailingWhitespace": true,
+        "editor.renderFinalNewline": "on",
+        "workbench.startupEditor": "none",
+        "git.autofetch": true,
+        "editor.autoClosingBrackets": "languageDefined",
+        "editor.fontVariations": true,
+        "git.suggestSmartCommit": false,
+        "[nix]": {
+            "editor.defaultFormatter": "kamadorueda.alejandra",
+            "editor.formatOnPaste": true,
+            "editor.formatOnSave": true,
+            "editor.formatOnType": false,
             "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace\"",
             "editor.wordWrap": "on",
             "editor.codeLensFontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace\"",
             "editor.experimentalGpuAcceleration": "off"
-		},
-		"alejandra.program": "alejandra"
-	}
+        },
+        "alejandra.program": "alejandra",
+        "nix.enableLanguageServer": true,
+        "nix.serverPath": "nixd",
+        "nix.serverSettings": {
+            "nixd": {
+                "formatting": {
+                    "command": [
+                        "alejandra"
+                    ]
+                },
+                "options": {
+                    "nixos": {
+                        "expr": "(builtins.getFlake \"/home/damathryxx64/damathryxx64\").nixosConfigurations.nixos.options"
+                    }
+                }
+            }
+        }
+    }
 }

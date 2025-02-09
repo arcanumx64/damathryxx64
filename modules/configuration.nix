@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   imports = [./desktop ./hardware ./packages ./shells];
 
   networking = {

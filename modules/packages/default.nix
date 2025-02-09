@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     # CLI Development Tools
     vim
@@ -62,7 +57,6 @@
     polkit_gnome # Authentication agent
 
     # Terminal & Shell
-    kitty # Modern terminal emulator
     alejandra # Nix formatter
 
     # System Libraries & Dependencies

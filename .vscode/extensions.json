@@ -5,13 +5,12 @@
         "dbaeumer.vscode-eslint",
         "editorconfig.editorconfig",
         "github.vscode-pull-request-github",
-        "bbenoist.nix",
         "davidanson.vscode-markdownlint",
         "tal7aouy.icons",
         "tal7aouy.indent-colorizer",
         "gruntfuggly.todo-tree",
         "jnoortheen.nix-ide",
-        "alvarosannas.nix",
-        "kamadorueda.alejandra"
+        "kamadorueda.alejandra",
+        "jdinhlife.gruvbox"
     ]
 }
