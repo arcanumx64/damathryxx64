@@ -5,15 +5,13 @@
         "dbaeumer.vscode-eslint",
         "editorconfig.editorconfig",
         "github.vscode-pull-request-github",
-        "ms-vscode.vscode-github-issue-notebooks",
-        "ms-vscode.extension-test-runner",
-        "jrieken.vscode-pr-pinger",
         "bbenoist.nix",
         "davidanson.vscode-markdownlint",
         "tal7aouy.icons",
         "tal7aouy.indent-colorizer",
         "tal7aouy.theme",
         "ms-vscode-remote.remote-containers",
-        "gruntfuggly.todo-tree"
+        "gruntfuggly.todo-tree",
+        "ms-azuretools.vscode-docker"
     ]
 }
