@@ -10,14 +10,24 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Rebuild and apply the current NixOS configuration using flakes."
+            "detail": "Rebuild and apply the current NixOS configuration using flakes.",
+            "dependsOn": [
+                "git add flake.lock"
+            ],
+            "dependsOrder": "sequence",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
         },
         {
             "label": "Update Nix Channels",
             "type": "shell",
             "command": "sudo nix-channel --update",
             "problemMatcher": [],
-            "detail": "Update Nix channels to fetch the latest package updates."
+            "detail": "Update Nix channels to fetch the latest package updates.",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
         },
         {
             "label": "Garbage Collect",
@@ -46,6 +56,24 @@
             "command": "sudo nix flake update",
             "problemMatcher": [],
             "detail": "Update nixos packages",
+            "dependsOn": [
+                "Update Nix Channels"
+            ],
+            "dependsOrder": "sequence",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "git add flake.lock",
+            "type": "shell",
+            "command": "sudo git add flake.lock",
+            "problemMatcher": [],
+            "detail": "git add flake.lock if we have updates..?",
+            "dependsOn": [
+                "update"
+            ],
+            "dependsOrder": "sequence",
             "runOptions": {
                 "runOn": "folderOpen"
             }
