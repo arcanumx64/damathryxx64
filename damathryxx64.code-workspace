@@ -38,10 +38,7 @@
 						},
 						"options": {
 							"nixos": {
-								"expr": "(builtins.getFlake \"/absolute/path/to/flake\").nixosConfigurations.<name>.options"
-							},
-							"home-manager": {
-								"expr": "(builtins.getFlake \"/absolute/path/to/flake\").homeConfigurations.<name>.options"
+								"expr": "(builtins.getFlake \"/home/damathryxx64/damathryxx64/flake.nix\").nixosConfigurations.nixos.options"
 							}
 						}
 					}
@@ -50,7 +47,11 @@
 			"editor.defaultFormatter": "kamadorueda.alejandra",
 			"editor.formatOnPaste": true,
 			"editor.formatOnSave": true,
-			"editor.formatOnType": false
+			"editor.formatOnType": false,
+            "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace\"",
+            "editor.wordWrap": "on",
+            "editor.codeLensFontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace\"",
+            "editor.experimentalGpuAcceleration": "off"
 		},
 		"alejandra.program": "alejandra"
 	}

@@ -59,3 +59,4 @@ nix develop .#python
 - https://help.gnome.org/users/
 - https://nix.dev/manual/nix/2.18/introduction
 - https://dev.to/arnu515/getting-started-with-nix-and-nix-flakes-mml
+- https://ianthehenry.com/posts/how-to-learn-nix/
