@@ -61,6 +61,11 @@
     openssh.enable = true;
   };
 
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+  };
+
   programs = {
     mtr.enable = true;
     gnupg.agent = {
