@@ -1,12 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./desktop
-    ./hardware
-    ./packages
-    ./shells
-  ];
+  imports = [ ./desktop ./hardware ./packages ./shells ];
 
   networking = {
     hostName = "nixos";

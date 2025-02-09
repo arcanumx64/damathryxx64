@@ -1,6 +1,6 @@
 # python.nix
 
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> { } }:
 
 {
   devShell = pkgs.mkShell {

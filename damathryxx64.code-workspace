@@ -28,6 +28,30 @@
 		"git.autofetch": true,
 		"editor.autoClosingBrackets": "languageDefined",
 		"editor.fontVariations": true,
-		"git.suggestSmartCommit": false
+		"git.suggestSmartCommit": false,
+		"[nix]": {
+			"editor.defaultFormatter": "kamadorueda.alejandra",
+			"editor.formatOnPaste": true,
+			"editor.formatOnSave": true,
+			"editor.formatOnType": false
+		},
+		"alejandra.program": "alejandra",
+		"nix.serverSettings": {
+			"nixd": {
+				"formatting": {
+					"command": [
+						"alejandra"
+					]
+				},
+				"options": {
+					"nixos": {
+						"expr": "(builtins.getFlake \"/absolute/path/to/flake\").nixosConfigurations.<name>.options"
+					},
+					"home-manager": {
+						"expr": "(builtins.getFlake \"/absolute/path/to/flake\").homeConfigurations.<name>.options"
+					}
+				}
+			}
+		}
 	}
 }

@@ -23,5 +23,9 @@
     autorandr
     openssl
     cascadia-code
+    docker
+    docker-client
+    nvidia-container-toolkit
+    nixfmt-rfc-style
   ];
 }

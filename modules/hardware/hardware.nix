@@ -12,14 +12,8 @@
     ];
 
     initrd = {
-      availableKernelModules = [
-        "xhci_pci"
-        "ahci"
-        "nvme"
-        "usb_storage"
-        "usbhid"
-        "sd_mod"
-      ];
+      availableKernelModules =
+        [ "xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
       kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
     };
 
@@ -31,7 +25,7 @@
   };
 
   hardware = {
-    opengl = {
+    graphics = {
       enable = true;
       extraPackages = with pkgs; [
         vaapiIntel
