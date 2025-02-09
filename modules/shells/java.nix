@@ -1,7 +1,5 @@
 # java.nix
-{ pkgs ? import <nixpkgs> { } }:
-
-{
+{pkgs ? import <nixpkgs> {}}: {
   devShell = pkgs.mkShell {
     buildInputs = with pkgs; [
       # JDK 21 (Latest LTS version) as of Feb 6th 2025

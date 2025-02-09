@@ -1,6 +1,9 @@
-{ config, pkgs, lib, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -26,6 +29,6 @@
     docker
     docker-client
     nvidia-container-toolkit
-    nixfmt-rfc-style
+    alejandra
   ];
 }

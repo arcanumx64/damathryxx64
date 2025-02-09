@@ -1,13 +1,15 @@
-{ config, pkgs, ... }:
-
 {
-  imports = [ ./desktop ./hardware ./packages ./shells ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [./desktop ./hardware ./packages ./shells];
 
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
     firewall = {
-      allowedTCPPorts = [ 22 ];
+      allowedTCPPorts = [22];
       enable = true;
     };
   };
@@ -40,7 +42,7 @@
   users.users.damathryxx64 = {
     isNormalUser = true;
     description = "damathryx_x64";
-    extraGroups = [ "networkmanager" "wheel" "video" "input" ];
+    extraGroups = ["networkmanager" "wheel" "video" "input"];
   };
 
   security.sudo = {
@@ -52,7 +54,7 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   services = {
     printing.enable = true;

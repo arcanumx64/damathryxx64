@@ -1,7 +1,8 @@
-{ config, pkgs, ... }:
-
 {
-
+  config,
+  pkgs,
+  ...
+}: {
   fonts.fontconfig.enable = true;
   services.xserver = {
     enable = true;
@@ -24,7 +25,7 @@
       '';
     };
 
-    videoDrivers = [ "nvidia" ];
+    videoDrivers = ["nvidia"];
   };
 
   environment.sessionVariables = {
