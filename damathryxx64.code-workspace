@@ -5,40 +5,72 @@
         }
     ],
     "settings": {
+        // Editor Font & Display
         "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace",
         "editor.fontLigatures": true,
-        "files.autoSave": "onWindowChange",
-        "editor.renderWhitespace": "trailing",
+        "editor.fontVariations": true,
+        "editor.codeLensFontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace",
+        // Editor Behavior
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.autoClosingBrackets": "languageDefined",
         "editor.cursorStyle": "underline",
         "editor.wordWrap": "wordWrapColumn",
-        "explorer.excludeGitIgnore": true,
+        "editor.minimap.autohide": true,
+        "editor.suggestSelection": "first",
+        "editor.acceptSuggestionOnEnter": "smart",
+        "editor.quickSuggestionsDelay": 0,
+        "editor.snippetSuggestions": "top",
+        // Editor Display
+        "editor.renderWhitespace": "trailing",
+        "editor.renderControlCharacters": true,
+        "editor.renderFinalNewline": "on",
         "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-        "editor.codeLensFontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace",
-        "editor.formatOnPaste": true,
+        "editor.guides.bracketPairs": true,
+        "editor.guides.indentation": true,
+        "editor.stickyScroll.enabled": true,
+        // Diff Editor
         "diffEditor.codeLens": true,
         "diffEditor.wordWrap": "inherit",
-        "editor.minimap.autohide": true,
-        "editor.renderControlCharacters": true,
-        "files.autoGuessEncoding": true,
+        "diffEditor.ignoreTrimWhitespace": false,
+        // File Management
+        "files.autoSave": "onWindowChange",
         "files.autoSaveWorkspaceFilesOnly": true,
+        "files.autoGuessEncoding": true,
         "files.eol": "\n",
         "files.trimTrailingWhitespace": true,
-        "editor.renderFinalNewline": "on",
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        // Search & Replace
+        "search.showLineNumbers": true,
+        "search.smartCase": true,
+        "search.useGlobalIgnoreFiles": true,
+        "search.useParentIgnoreFiles": true,
+        // Terminal
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.cursorBlinking": true,
+        "terminal.integrated.persistentSessionReviveProcess": "never",
+        "terminal.integrated.enableMultiLinePasteWarning": true,
+        // Explorer
+        "explorer.excludeGitIgnore": true,
+        "explorer.autoReveal": true,
+        "explorer.confirmDelete": false,
+        "explorer.confirmDragAndDrop": false,
+        // Workbench
         "workbench.startupEditor": "none",
+        "workbench.editor.enablePreview": false,
+        "workbench.editor.highlightModifiedTabs": true,
+        "workbench.editor.limit.enabled": true,
+        "workbench.editor.limit.value": 8,
+        "workbench.settings.openDefaultSettings": true,
+        // Git
         "git.autofetch": true,
-        "editor.autoClosingBrackets": "languageDefined",
-        "editor.fontVariations": true,
         "git.suggestSmartCommit": false,
-        "[nix]": {
-            "editor.defaultFormatter": "kamadorueda.alejandra",
-            "editor.formatOnPaste": true,
-            "editor.formatOnSave": true,
-            "editor.formatOnType": false,
-            "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace\"",
-            "editor.wordWrap": "on",
-            "editor.codeLensFontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace\"",
-            "editor.experimentalGpuAcceleration": "off"
-        },
+        "git.enableSmartCommit": true,
+        "git.confirmSync": false,
+        "git.openRepositoryInParentFolders": "never",
+        // Nix Configuration
         "alejandra.program": "alejandra",
         "nix.enableLanguageServer": true,
         "nix.serverPath": "nixd",
@@ -55,6 +87,16 @@
                     }
                 }
             }
-        }
+        },
+        "editor.fontSize": 15,
+        "editor.matchBrackets": "never",
+        "editor.minimap.enabled": false,
+        "editor.scrollbar.verticalScrollbarSize": 0,
+        "workbench.statusBar.visible": false,
+        "window.zoomLevel": 0.5,
+        "git.rebaseWhenSync": true,
+        "git.defaultBranchName": "trunk",
+        "git.enableCommitSigning": false,
+        "git.postCommitCommand": "sync"
     }
 }

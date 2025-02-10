@@ -7,10 +7,11 @@
         "github.vscode-pull-request-github",
         "davidanson.vscode-markdownlint",
         "tal7aouy.icons",
-        "tal7aouy.indent-colorizer",
         "gruntfuggly.todo-tree",
         "jnoortheen.nix-ide",
         "kamadorueda.alejandra",
-        "jdinhlife.gruvbox"
+        "ibm.output-colorizer",
+        "oderwat.indent-rainbow",
+        "be5invis.theme-verdandi"
     ]
 }
