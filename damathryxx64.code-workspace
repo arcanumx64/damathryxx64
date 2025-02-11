@@ -73,7 +73,7 @@
         // Nix Configuration
         "alejandra.program": "alejandra",
         "nix.enableLanguageServer": true,
-        "nix.serverPath": "nixd",
+        "nix.serverPath": "/run/current-system/sw/bin/nixd",
         "nix.serverSettings": {
             "nixd": {
                 "formatting": {
