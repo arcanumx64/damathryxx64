@@ -14,10 +14,7 @@
             "dependsOn": [
                 "git add flake.lock"
             ],
-            "dependsOrder": "sequence",
-            "runOptions": {
-                "runOn": "folderOpen"
-            }
+            "dependsOrder": "sequence"
         },
         {
             "label": "Update Nix Channels",
@@ -56,10 +53,7 @@
             "dependsOn": [
                 "Update Nix Channels"
             ],
-            "dependsOrder": "sequence",
-            "runOptions": {
-                "runOn": "folderOpen"
-            }
+            "dependsOrder": "sequence"
         },
         {
             "label": "git add flake.lock",
@@ -70,10 +64,7 @@
             "dependsOn": [
                 "update"
             ],
-            "dependsOrder": "sequence",
-            "runOptions": {
-                "runOn": "folderOpen"
-            }
+            "dependsOrder": "sequence"
         }
     ]
 }
