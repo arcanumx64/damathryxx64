@@ -17,7 +17,7 @@
       availableKernelModules = ["xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod"];
       kernelModules = ["nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
     };
-
+    extraModprobeConfig = "options snd-intel-dspcfg dsp_driver=1";
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;

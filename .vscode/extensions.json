@@ -12,9 +12,10 @@
         "kamadorueda.alejandra",
         "ibm.output-colorizer",
         "oderwat.indent-rainbow",
-        "be5invis.theme-verdandi",
         "ms-python.python",
         "4ops.terraform",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        "jdinhlife.gruvbox",
+        "azat-io.vscode-gruvbox-icon-theme"
     ]
 }
