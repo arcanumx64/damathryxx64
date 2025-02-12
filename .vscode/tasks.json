@@ -24,10 +24,7 @@
             "type": "shell",
             "command": "sudo nix-channel --update",
             "problemMatcher": [],
-            "detail": "Update Nix channels to fetch the latest package updates.",
-            "runOptions": {
-                "runOn": "folderOpen"
-            }
+            "detail": "Update Nix channels to fetch the latest package updates."
         },
         {
             "label": "Garbage Collect",

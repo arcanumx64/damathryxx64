@@ -27,13 +27,13 @@
     wget
 
     # System Management & Monitoring
-    gnome-tweaks
-    gnome-system-monitor
-    inxi # System information
-    duf # Disk usage analyzer
-    btrfs-progs # BTRFS filesystem tools
-    cpufrequtils
-    pciutils
+    #gnome-tweaks
+    #gnome-system-monitor
+    #inxi # System information
+    #duf # Disk usage analyzer
+    #btrfs-progs # BTRFS filesystem tools
+    #cpufrequtils
+    #pciutils
     autorandr # Multi-monitor management
 
     # Office & Document Tools
@@ -49,9 +49,9 @@
     playerctl # Media player control
 
     # GNOME Specific
-    mutter # GNOME window manager
-    gnomeExtensions.display-scale-switcher
-    gnomeExtensions.hot-edge
+    #mutter # GNOME window manager
+    #gnomeExtensions.display-scale-switcher
+    #gnomeExtensions.hot-edge
     glib # For gsettings
     gsettings-qt
     polkit_gnome # Authentication agent
