@@ -73,7 +73,7 @@
         // Nix Configuration
         "alejandra.program": "alejandra",
         "nix.enableLanguageServer": true,
-        "nix.serverPath": "/run/current-system/sw/bin/nixd",
+        "nix.serverPath": "nixd",
         "nix.serverSettings": {
             "nixd": {
                 "formatting": {
@@ -92,7 +92,7 @@
         "editor.matchBrackets": "never",
         "editor.minimap.enabled": false,
         "editor.scrollbar.verticalScrollbarSize": 0,
-        "workbench.statusBar.visible": false,
+        "workbench.statusBar.visible": true,
         "window.zoomLevel": 0.5,
         "git.rebaseWhenSync": true,
         "git.defaultBranchName": "trunk",

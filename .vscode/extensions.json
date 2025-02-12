@@ -12,6 +12,8 @@
         "kamadorueda.alejandra",
         "ibm.output-colorizer",
         "oderwat.indent-rainbow",
-        "be5invis.theme-verdandi"
+        "be5invis.theme-verdandi",
+        "ms-python.python",
+        "4ops.terraform"
     ]
 }
