@@ -1,11 +1,13 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs = {
     self,
     nixpkgs,
+    nixos-hardware
   }: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -14,7 +16,9 @@
     awsEnv = import ./modules/shells/aws.nix {inherit pkgs;};
   in {
     nixosConfigurations.nixos =
-      nixpkgs.lib.nixosSystem {modules = [./modules/configuration.nix];};
+      nixpkgs.lib.nixosSystem {modules = [
+        nixos-hardware.nixosModules.lenovo-legion-16ach6h-nvidia
+        ./modules/configuration.nix];};
 
     devShells.${system} = {
       java = javaEnv.devShell;

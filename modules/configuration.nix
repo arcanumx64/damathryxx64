@@ -1,6 +1,20 @@
 {...}: {
   imports = [./desktop ./hardware ./packages ./shells];
 
+  # Bootloader.
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    kernelModules = ["snd-hda-intel" "snd-intel-dspcfg"];
+  };
+
+  hardware = {
+    pulseaudio.enable = false;
+    nvidia.dynamicBoost.enable = false;
+  };
+
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
@@ -38,8 +52,12 @@
   users.users.damathryxx64 = {
     isNormalUser = true;
     description = "damathryx_x64";
-    extraGroups = ["networkmanager" "wheel" "video" "input"];
+    extraGroups = ["networkmanager" "wheel" "video" "input" "docker"];
   };
+
+  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@tty1".enable = false;
 
   security.sudo = {
     enable = true;
@@ -51,11 +69,6 @@
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
-
-  services = {
-    printing.enable = true;
-    openssh.enable = true;
-  };
 
   virtualisation.docker = {
     enable = true;
