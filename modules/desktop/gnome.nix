@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{...}: {
   fonts.fontconfig.enable = true;
   services = {
     printing.enable = true;
@@ -55,5 +51,10 @@
     gnomeExtensions.system-monitor
     gnomeExtensions.user-themes
     gnome-shell-extensions
+    gruvbox-dark-gtk
+    gruvbox-dark-icons-gtk
+    gruvbox-kvantum
+    gruvbox-gtk-theme
+    gruvbox-plus-icons
   ];
 }
