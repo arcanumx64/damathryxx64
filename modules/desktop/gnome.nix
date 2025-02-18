@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   fonts.fontconfig.enable = true;
   services = {
     printing.enable = true;
