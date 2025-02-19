@@ -1,18 +1,13 @@
-{...}: {
+{pkgs, ...}: {
   imports = [./desktop ./hardware ./packages ./shells];
 
   # Bootloader.
   boot = {
+    kernelPackages = pkgs.linuxPackages_zen;
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
-    kernelModules = ["snd-hda-intel" "snd-intel-dspcfg"];
-  };
-
-  hardware = {
-    pulseaudio.enable = false;
-    nvidia.dynamicBoost.enable = false;
   };
 
   networking = {

@@ -6,6 +6,10 @@
     power-profiles-daemon.enable = true;
     upower.enable = true;
     accounts-daemon.enable = true;
+    displayManager.autoLogin = {
+      enable = true;
+      user = "damathryxx64";
+    };
     xserver = {
       enable = true;
       videoDrivers = ["nvidia"];
@@ -15,10 +19,7 @@
           enable = true;
           wayland = true;
         };
-        autoLogin = {
-          enable = true;
-          user = "damathryxx64";
-        };
+
         setupCommands = ''
           ${pkgs.xorg.xrandr}/bin/xrandr --auto
         '';
