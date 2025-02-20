@@ -12,6 +12,12 @@
     tree
     unzip
     eza # Modern replacement for ls
+    zoxide # Directory navigation
+    bat # Modern replacement for cat
+    fd # Modern replacement for find
+    ripgrep # Modern replacement for grep
+    fzf # Fuzzy finder
+
     curl
     wget
     fastfetch # System information display
@@ -20,6 +26,7 @@
 
     # Text Editors & IDEs
     vscode
+    kitty
 
     # Network Tools
     networkmanagerapplet
@@ -43,7 +50,6 @@
     # Media Tools
     ffmpeg # Media converter
     eog # Image viewer
-    imagemagick # Image manipulation
     pamixer # CLI audio control
     pavucontrol # GUI audio control
     playerctl # Media player control
@@ -56,15 +62,11 @@
     gsettings-qt
     polkit_gnome # Authentication agent
 
-    cheese # webcam tool
-    epiphany # web browser
     evince # document viewer
     gedit # text editor
     gnome-characters
     gnome-music
     gnome-photos
-    gnome-terminal
-    gnome-tour
     totem # video player
 
     # Terminal & Shell
@@ -76,9 +78,13 @@
     libnotify
     xdg-user-dirs
     xdg-utils
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
+    xdg-user-dirs-gtk
 
     # Fonts
     cascadia-code
+    fira-code-nerdfont
 
     # AI & Development Tools
     ollama # Local LLM runner
