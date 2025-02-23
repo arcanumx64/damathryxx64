@@ -21,7 +21,7 @@
   ];
 
   fonts = {
-    fonts = with pkgs; [
+    packages = with pkgs; [
       cascadia-code
       (nerdfonts.override {fonts = ["CascadiaCode"];})
     ];
@@ -49,6 +49,10 @@
         "tmux"
         "history-substring-search"
       ];
+    };
+
+    shellAliases = {
+      ls = "eza -lA";
     };
   };
 
