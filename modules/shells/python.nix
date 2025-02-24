@@ -1,8 +1,8 @@
 # python.nix
 {pkgs ? import <nixpkgs> {}}: {
   devShell = pkgs.mkShell {
-    buildInputs = with pkgs.python312Packages; [
-      pkgs.python312
+    buildInputs = with pkgs.python311Packages; [
+      pkgs.python311
       virtualenv
       pip
       setuptools
