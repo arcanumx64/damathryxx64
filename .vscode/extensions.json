@@ -12,6 +12,9 @@
         "jdinhlife.gruvbox",
         "azat-io.vscode-gruvbox-icon-theme",
         "streetsidesoftware.code-spell-checker",
-        "ms-azuretools.vscode-docker"
+        "ms-azuretools.vscode-docker",
+        "formulahendry.code-runner",
+        "foxundermoon.shell-format",
+        "mads-hartmann.bash-ide-vscode"
     ]
 }
