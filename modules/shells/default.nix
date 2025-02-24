@@ -1,25 +1,4 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    bat
-    fd
-    fzf
-    git
-    htop
-    jq
-    ripgrep
-    starship
-    tmux
-    zsh
-    docker
-    kubectl
-    terraform
-    awscli2
-    python3
-    nodejs
-    go
-    kitty
-  ];
-
   fonts = {
     packages = with pkgs; [
       cascadia-code

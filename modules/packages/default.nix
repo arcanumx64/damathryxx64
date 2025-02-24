@@ -17,9 +17,11 @@
     fd # Modern replacement for find
     ripgrep # Modern replacement for grep
     fzf # Fuzzy finder
+    ripgrep
+    starship
+    tmux
 
-    curl
-    wget
+    htop
     fastfetch # System information display
     killall
     jq # JSON processor
