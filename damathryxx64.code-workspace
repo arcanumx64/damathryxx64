@@ -97,6 +97,9 @@
         "git.rebaseWhenSync": true,
         "git.defaultBranchName": "trunk",
         "git.enableCommitSigning": false,
-        "git.postCommitCommand": "sync"
+        "git.postCommitCommand": "sync",
+        "files.watcherExclude": {
+            "**/target": true
+        }
     }
 }
