@@ -15,6 +15,7 @@
     pythonEnv = import ./modules/shells/python.nix {inherit pkgs;};
     awsEnv = import ./modules/shells/aws.nix {inherit pkgs;};
     scalaEnv = import ./modules/shells/scala.nix {inherit pkgs;};
+    ansibleEnv = import ./modules/shells/ansible.nix {inherit pkgs;};
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       modules = [
@@ -28,6 +29,7 @@
       python = pythonEnv.devShell;
       aws = awsEnv.devShell;
       scala = scalaEnv.devShell;
+      ansible = ansibleEnv.devShell;
     };
   };
 }
