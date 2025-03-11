@@ -6,10 +6,10 @@
     ],
     "settings": {
         // Editor Font & Display
-        "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace",
+        "editor.fontFamily": "'Cascadia Code NF', Consolas, 'Courier New', 'MesloLGS NF', monospace",
         "editor.fontLigatures": true,
         "editor.fontVariations": true,
-        "editor.codeLensFontFamily": "'Cascadia Code', Consolas, 'Courier New', 'MesloLGS NF', monospace",
+        "editor.codeLensFontFamily": "'Cascadia Code NF', Consolas, 'Courier New', 'MesloLGS NF', monospace",
         // Editor Behavior
         "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
@@ -100,6 +100,7 @@
         "git.postCommitCommand": "sync",
         "files.watcherExclude": {
             "**/target": true
-        }
+        },
+        "terminal.integrated.fontFamily": "'Cascadia Code NF', Consolas, 'Courier New', 'MesloLGS NF', monospace"
     }
 }

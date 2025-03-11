@@ -13,9 +13,7 @@
     pkgs = nixpkgs.legacyPackages.${system};
     javaEnv = import ./modules/shells/java.nix {inherit pkgs;};
     pythonEnv = import ./modules/shells/python.nix {inherit pkgs;};
-    awsEnv = import ./modules/shells/aws.nix {inherit pkgs;};
-    scalaEnv = import ./modules/shells/scala.nix {inherit pkgs;};
-    ansibleEnv = import ./modules/shells/ansible.nix {inherit pkgs;};
+    devopsEnv = import ./modules/shells/devops.nix {inherit pkgs;};
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       modules = [
@@ -27,9 +25,7 @@
     devShells.${system} = {
       java = javaEnv.devShell;
       python = pythonEnv.devShell;
-      aws = awsEnv.devShell;
-      scala = scalaEnv.devShell;
-      ansible = ansibleEnv.devShell;
+      devops = devopsEnv.devShell;
     };
   };
 }
