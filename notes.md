@@ -1,4 +1,4 @@
-## Nix commands & References
+## Nix commands
 
 ```sh
 nix config show | grep experimental-features
@@ -71,13 +71,3 @@ nix develop .#python
 # aws dev env
 nix develop .#aws
 ```
-
-## references
-
-- <https://determinate.systems/posts/declarative-gnome-configuration-with-nixos/>
-- <https://heywoodlh.io/nixos-gnome-settings-and-keyboard-shortcuts>
-- <https://help.gnome.org/users/gnome-help/stable/shell-keyboard-shortcuts.html.en>
-- <https://help.gnome.org/users/>
-- <https://nix.dev/manual/nix/2.18/introduction>
-- <https://dev.to/arnu515/getting-started-with-nix-and-nix-flakes-mml>
-- <https://ianthehenry.com/posts/how-to-learn-nix/>
