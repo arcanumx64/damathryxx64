@@ -11,7 +11,6 @@
   }: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
-    javaEnv = import ./modules/shells/java.nix {inherit pkgs;};
     pythonEnv = import ./modules/shells/python.nix {inherit pkgs;};
     devopsEnv = import ./modules/shells/devops.nix {inherit pkgs;};
   in {
@@ -23,7 +22,6 @@
     };
 
     devShells.${system} = {
-      java = javaEnv.devShell;
       python = pythonEnv.devShell;
       devops = devopsEnv.devShell;
     };

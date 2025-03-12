@@ -27,16 +27,24 @@
         "terraform"
         "tmux"
         "history-substring-search"
+        "zoxide"
+        "jira"
+        "debian"
+        "dnf"
+        "systemd"
+        "yum"
+        "aws"
+        "eza"
+        "gh"
       ];
-    };
-
-    shellAliases = {
-      ls = "eza -lA";
+      theme = "agnoster";
     };
   };
 
-  programs.starship = {
-    enable = true;
+  programs = {
+    starship = {
+      enable = true;
+    };
   };
 
   environment.pathsToLink = ["/share/zsh"];

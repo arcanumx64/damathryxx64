@@ -12,8 +12,6 @@ sudo nixos-rebuild switch --flake ".#nixos"
 ```sh
 # python dev
 nix develop ".#python"
-# java dev
-nix develop ".#java"
 # devops dev
 export NIXPKGS_ALLOW_UNFREE=1; nix develop ".#devops" --impure
 ```
