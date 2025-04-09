@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  imports = [./desktop ./hardware ./packages ./shells];
+  imports = [./desktop ./hardware ./packages ./shells ./nixSight];
 
   # Bootloader.
   boot = {
