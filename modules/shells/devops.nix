@@ -78,7 +78,8 @@
         export XDG_CACHE_HOME="$TEMP_HOME/.cache"
 
         # Create completion directories
-        mkdir -p "$TEMP_HOME/completions"
+        mkdir -p "$ZDOTDIR/completions"
+        mkdir -p "$ZDOTDIR/site-functions"
 
         # Set up environment variables
         export SHELL=zsh
@@ -96,13 +97,44 @@
         # Create an Oh-My-Zsh stub directly in the temp directory
         mkdir -p "$ZDOTDIR/oh-my-zsh/themes"
         mkdir -p "$ZDOTDIR/oh-my-zsh/custom/plugins"
-        mkdir -p "$ZDOTDIR/completions"
+
+        # Copy core completions from Nixpkgs
+        # Link to standard locations for built-in completions from packages
+        mkdir -p "$ZDOTDIR/site-functions"
+        ln -sf "${pkgs.zsh}/share/zsh/site-functions/"* "$ZDOTDIR/site-functions/" 2>/dev/null || true
+
+        # Dynamically enable completions for all packages in buildInputs
+        for pkg in $NIX_BUILD_INPUTS; do
+            if [ -d "$pkg/share/zsh/site-functions" ]; then
+                ln -sf "$pkg/share/zsh/site-functions/"* "$ZDOTDIR/site-functions/" 2>/dev/null || true
+            fi
+            if [ -d "$pkg/share/zsh/vendor-completions" ]; then
+                ln -sf "$pkg/share/zsh/vendor-completions/"* "$ZDOTDIR/site-functions/" 2>/dev/null || true
+            fi
+            if [ -d "$pkg/share/bash-completion/completions" ]; then
+                for f in "$pkg/share/bash-completion/completions/"*; do
+                    if [ -f "$f" ]; then
+                        bn=$(basename "$f")
+                        # Create an adapter for bash completions
+                        echo "#compdef $bn" > "$ZDOTDIR/site-functions/_$bn"
+                        echo "autoload -U +X bashcompinit && bashcompinit" >> "$ZDOTDIR/site-functions/_$bn"
+                        echo "source $f" >> "$ZDOTDIR/site-functions/_$bn"
+                    fi
+                done
+            fi
+        done
 
         # Copy agnoster theme
         cp "${pkgs.oh-my-zsh}/share/oh-my-zsh/themes/agnoster.zsh-theme" "$ZDOTDIR/oh-my-zsh/themes/"
 
         # Create ZSH configuration
         cat > "$ZDOTDIR/.zshrc" << 'EOF'
+        # Add completions directory to fpath
+        fpath=("$ZDOTDIR/site-functions" "$ZDOTDIR/completions" $fpath)
+
+        # Initialize bash completion support for ZSH
+        autoload -U +X bashcompinit && bashcompinit
+
         # Initialize completion system first
         autoload -Uz compinit
         compinit -u
@@ -120,11 +152,23 @@
         source ${pkgs.oh-my-zsh}/share/oh-my-zsh/themes/agnoster.zsh-theme
 
         # Load plugin functions from oh-my-zsh
-        for plugin in git docker kubectl terraform aws; do
+        for plugin in git docker kubectl fzf terraform history-substring-search zoxide jira debian dnf systemd yum aws eza; do
             if [[ -f ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/$plugin/$plugin.plugin.zsh ]]; then
-            source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/$plugin/$plugin.plugin.zsh
+                source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/$plugin/$plugin.plugin.zsh
             fi
         done
+
+        # For Kubectl alias
+        if type kubectl &>/dev/null; then
+            source <(kubectl completion zsh)
+            compdef k=kubectl
+        fi
+
+        # For Terraform alias
+        if type terraform &>/dev/null; then
+            complete -o nospace -C $(which terraform) terraform
+            compdef tf=terraform
+        fi
 
         # Autosuggestions & Syntax Highlighting
         source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -168,12 +212,6 @@
 
         # Initialize zoxide
         eval "$(zoxide init zsh)"
-
-        # Fix compdef issues by forcing silent operation
-        # This ensures plugin initialization errors don't appear
-        compdef() {
-            builtin compdef "$@" 2>/dev/null || true
-        }
         EOF
 
         # Create Starship configuration
@@ -292,7 +330,6 @@
         # Create required files and directories for ZSH
         mkdir -p "$ZDOTDIR/.zsh"
         mkdir -p "$XDG_CACHE_HOME/zsh"
-        mkdir -p "$TEMP_HOME/completions"
         touch "$ZDOTDIR/.zsh_history"
 
         # Start ZSH
