@@ -11,7 +11,9 @@ sudo nixos-rebuild switch --flake ".#nixos"
 
 ```sh
 # python dev
-nix develop ".#python"
+export NIXPKGS_ALLOW_UNFREE=1; nix develop "github:arcanumx64/damathryxx64#python" \
+        --impure --extra-experimental-features nix-command --extra-experimental-features flakes
 # devops dev
-export NIXPKGS_ALLOW_UNFREE=1; nix develop ".#devops" --impure
+export NIXPKGS_ALLOW_UNFREE=1; nix develop "github:arcanumx64/damathryxx64#devops" \
+        --impure --extra-experimental-features nix-command --extra-experimental-features flakes
 ```
