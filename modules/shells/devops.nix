@@ -301,6 +301,8 @@
         # Define help function directly in .zshrc
         cat >> "$ZDOTDIR/.zshrc" << 'EOF'
 
+        source ~/cloud-engg/invoker.sh
+
         # DevOps Help Function
         function help-devops() {
         echo "\033[1;36m📚 DevOps Shell Quick Reference:\033[0m"
