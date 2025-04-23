@@ -54,6 +54,10 @@
       direnv
       tree
 
+      # Networking tools
+      inetutils
+      openssh
+
       # Fonts
       cascadia-code
       (nerdfonts.override {fonts = ["CascadiaCode"];})
