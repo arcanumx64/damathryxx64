@@ -1,4 +1,8 @@
-# NixOS
+# Damathryxx64
+
+A comprehensive NixOS configuration flake that defines my personal computing environment using the Nix ecosystem. The configuration encompasses system-level settings, development shells, and dotfiles, all managed through a declarative approach that ensures reproducibility and consistency across multiple machines.
+
+## NixOS
 
 ```sh
 nix-shell -p git vim curl pciutils gh
@@ -7,12 +11,20 @@ nixos-generate-config --show-hardware-config > modules/hardware/hardware-configu
 sudo nixos-rebuild switch --flake ".#nixos"
 ```
 
-# Nix-Shell
+## Nix development shells
+
+```sh
+# install nix - before developing python/devops dev envs
+sh <(curl -L https://nixos.org/nix/install) --no-daemon
+```
 
 ```sh
 # python dev
 export NIXPKGS_ALLOW_UNFREE=1; nix develop "github:arcanumx64/damathryxx64#python" \
         --impure --extra-experimental-features nix-command --extra-experimental-features flakes
+```
+
+```sh
 # devops dev
 export NIXPKGS_ALLOW_UNFREE=1; nix develop "github:arcanumx64/damathryxx64#devops" \
         --impure --extra-experimental-features nix-command --extra-experimental-features flakes
