@@ -1,4 +1,5 @@
-name: Update Flake and Auto Merge
+name: Update Flake and Auto Push
+# This workflow updates the flake.lock file and pushes changes to the trunk branch.
 
 on:
   schedule:
