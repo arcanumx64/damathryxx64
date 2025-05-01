@@ -1,8 +1,7 @@
 {pkgs, ...}: {
   fonts = {
     packages = with pkgs; [
-      cascadia-code
-      (nerdfonts.override {fonts = ["CascadiaCode"];})
+      pkgs.nerd-fonts.caskaydia-cove
     ];
     fontconfig = {
       defaultFonts = {
