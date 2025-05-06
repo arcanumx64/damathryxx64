@@ -28,7 +28,6 @@ export NIXPKGS_ALLOW_UNFREE=1; nix develop "github:arcanumx64/damathryxx64#pytho
 ### [DevOps dev env](https://github.com/arcanumx64/damathryxx64/blob/trunk/modules/shells/devops.nix)
 
 ```sh
-# devops dev
 export NIXPKGS_ALLOW_UNFREE=1; nix develop "github:arcanumx64/damathryxx64#devops" \
         --impure --extra-experimental-features nix-command --extra-experimental-features flakes
 ```
