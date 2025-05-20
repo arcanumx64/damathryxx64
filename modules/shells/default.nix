@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   fonts = {
     packages = with pkgs; [
-      pkgs.nerd-fonts.caskaydia-cove
+      nerd-fonts.caskaydia-cove
     ];
     fontconfig = {
       defaultFonts = {

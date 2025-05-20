@@ -86,7 +86,7 @@
 
     # Fonts
     cascadia-code
-    fira-code-nerdfont
+    nerd-fonts.fira-code
 
     # AI & Development Tools
     ollama # Local LLM runner

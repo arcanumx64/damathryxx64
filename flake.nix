@@ -1,7 +1,7 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/24.11";
-    nixos-hardware.url = "github:arcanumx64/nixos-hardware/ux540";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:arcanumx64/nixos-hardware/feat/asus-ux540";
   };
 
   outputs = {
