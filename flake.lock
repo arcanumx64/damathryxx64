@@ -2,32 +2,32 @@
   "nodes": {
     "nixos-hardware": {
       "locked": {
-        "lastModified": 1747684167,
-        "narHash": "sha256-l6jbonaboCBlB8lCjBkrqgh2zEnvt6F3f4dOU/8CLd4=",
-        "owner": "NixOS",
+        "lastModified": 1746130658,
+        "narHash": "sha256-FQKj7KvZHIU6kx0cKspdN4RTIFj681qjJdL54yfNj6c=",
+        "owner": "arcanumx64",
         "repo": "nixos-hardware",
-        "rev": "e8f38b2c19c0647e39021c3d47172ff5469af8a9",
+        "rev": "3b7b225c400864ee2f875bb69b59805870ea0e1a",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "master",
+        "owner": "arcanumx64",
+        "ref": "feat/asus-ux540",
         "repo": "nixos-hardware",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1747699997,
-        "narHash": "sha256-Us+99AQBnrHfdSBHLF6SgYDUiJhYNTncFXznqSdhlVI=",
+        "lastModified": 1747542820,
+        "narHash": "sha256-GaOZntlJ6gPPbbkTLjbd8BMWaDYafhuuYRNrxCGnPJw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5c68d925b545ab6daea44ba1295756bb2493c6af",
+        "rev": "292fa7d4f6519c074f0a50394dbbe69859bb6043",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "master",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }

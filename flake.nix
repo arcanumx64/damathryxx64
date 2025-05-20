@@ -1,7 +1,7 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/master";
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:arcanumx64/nixos-hardware/feat/asus-ux540";
   };
 
   outputs = {
@@ -16,7 +16,7 @@
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       modules = [
-        nixos-hardware.nixosModules.lenovo-legion-16ach6h-nvidia
+        nixos-hardware.nixosModules.asus-zenbook-ux540
         ./modules/configuration.nix
       ];
     };
