@@ -2,16 +2,16 @@
   "nodes": {
     "nixos-hardware": {
       "locked": {
-        "lastModified": 1748432914,
-        "narHash": "sha256-go33+wpzZtaGot6XzYkBxl3irWZEiVvoaNtXcuIMY+w=",
+        "lastModified": 1751654733,
+        "narHash": "sha256-I1srHT7LGSSyPwjW1efgkdMT0jP6PcFVL86Leq46frE=",
         "owner": "arcanumx64",
         "repo": "nixos-hardware",
-        "rev": "9043e8cb9030699b661f2131f4a36853eebdc2b4",
+        "rev": "6c7a08f4465bc3887ecc35da0b1c9e206dc1c591",
         "type": "github"
       },
       "original": {
         "owner": "arcanumx64",
-        "ref": "feat/asus-ux540",
+        "ref": "master",
         "repo": "nixos-hardware",
         "type": "github"
       }
