@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  imports = [./insecure_packages.nix];
   environment.systemPackages = with pkgs; [
     # CLI Development Tools
     vim
@@ -19,7 +20,6 @@
     fzf # Fuzzy finder
     ripgrep
     starship
-    tmux
 
     htop
     fastfetch # System information display
@@ -28,7 +28,6 @@
 
     # Text Editors & IDEs
     vscode
-    kitty
 
     # Network Tools
     networkmanagerapplet
@@ -45,8 +44,6 @@
     pciutils
     autorandr # Multi-monitor management
 
-    # Office & Document Tools
-    libreoffice-qt6-fresh
     xarchiver # Archive manager
 
     # Media Tools
@@ -55,6 +52,8 @@
     pamixer # CLI audio control
     pavucontrol # GUI audio control
     playerctl # Media player control
+    alsa-firmware
+    alsa-utils # ALSA utilities
 
     # GNOME Specific
     mutter # GNOME window manager
@@ -65,9 +64,7 @@
     polkit_gnome # Authentication agent
 
     evince # document viewer
-    gedit # text editor
     gnome-characters
-    gnome-music
     gnome-photos
     totem # video player
 

@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  userName,
+  ...
+}: {
   fonts.fontconfig.enable = true;
   services = {
     printing.enable = true;
@@ -8,7 +12,7 @@
     accounts-daemon.enable = true;
     displayManager.autoLogin = {
       enable = true;
-      user = "damathryxx64";
+      user = userName;
     };
     xserver = {
       enable = true;

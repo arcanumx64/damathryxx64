@@ -1,9 +1,20 @@
-{pkgs, ...}: {
-  imports = [./desktop ./hardware ./packages ./shells ./nixSight];
+{
+  pkgs,
+  hostName ? "nixos",
+  userName ? "damathryxx64",
+  ...
+}: {
+  imports = [
+    (import ./desktop {inherit pkgs userName;})
+    ./hardware
+    ./packages
+    ./shells
+    ./nixSight
+  ];
 
   # Bootloader.
   boot = {
-    kernelPackages = pkgs.linuxPackages_zen;
+    kernelPackages = pkgs.linuxPackages_latest;
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
@@ -11,7 +22,7 @@
   };
 
   networking = {
-    hostName = "nixos";
+    hostName = hostName;
     networkmanager.enable = true;
     firewall = {
       allowedTCPPorts = [22];
@@ -44,10 +55,10 @@
     jack.enable = true;
   };
 
-  users.users.damathryxx64 = {
+  users.users.${userName} = {
     isNormalUser = true;
-    description = "damathryx_x64";
-    extraGroups = ["networkmanager" "wheel" "video" "input" "docker"];
+    description = userName;
+    extraGroups = ["networkmanager" "wheel" "video" "input" "docker" "audio"];
   };
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
@@ -58,7 +69,7 @@
     enable = true;
     wheelNeedsPassword = false;
     extraConfig = ''
-      damathryxx64 ALL=(ALL) NOPASSWD: /usr/bin/nix, /usr/bin/nix-*
+      ${userName} ALL=(ALL) NOPASSWD: /usr/bin/nix, /usr/bin/nix-*
     '';
   };
 

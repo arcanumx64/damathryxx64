@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/release-25.05";
     nixos-hardware.url = "github:arcanumx64/nixos-hardware/master";
   };
 
@@ -13,11 +13,16 @@
     pkgs = nixpkgs.legacyPackages.${system};
     pythonEnv = import ./modules/shells/python.nix {inherit pkgs;};
     devopsEnv = import ./modules/shells/devops.nix {inherit pkgs;};
+    hostName = "nixos";
+    userName = "damathryxx64";
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       modules = [
         nixos-hardware.nixosModules.asus-zenbook-ux540
-        ./modules/configuration.nix
+        ({...}:
+          import ./modules/configuration.nix {
+            inherit pkgs hostName userName;
+          })
       ];
     };
 

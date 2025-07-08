@@ -1,1 +1,11 @@
-{...}: {imports = [./gnome.nix ./corp.nix];}
+{
+  userName,
+  pkgs,
+  ...
+}: {
+  imports = [
+    (import ./gnome.nix {
+      inherit pkgs userName;
+    })
+  ];
+}

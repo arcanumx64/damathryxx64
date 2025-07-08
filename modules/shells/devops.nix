@@ -58,9 +58,6 @@
       inetutils
       openssh
 
-      # Fonts
-      pkgs.nerd-fonts.caskaydia-cove
-
       # Development Tools
       python312
       python312Packages.pip
