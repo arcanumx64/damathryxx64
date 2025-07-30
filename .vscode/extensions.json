@@ -38,6 +38,7 @@
         "tomoki1207.pdf",
         "ms-vscode-remote.remote-wsl",
         "redhat.vscode-yaml",
-        "github.vscode-github-actions"
+        "github.vscode-github-actions",
+        "icrawl.discord-vscode"
     ]
 }
