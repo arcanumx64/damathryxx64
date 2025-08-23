@@ -17,7 +17,7 @@
         "editor.autoClosingBrackets": "languageDefined",
         "editor.cursorStyle": "underline",
         "editor.wordWrap": "wordWrapColumn",
-        "editor.minimap.autohide": true,
+        "editor.minimap.autohide": "mouseover",
         "editor.suggestSelection": "first",
         "editor.acceptSuggestionOnEnter": "smart",
         "editor.quickSuggestionsDelay": 0,
