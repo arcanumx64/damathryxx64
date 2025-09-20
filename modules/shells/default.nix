@@ -24,7 +24,6 @@
         "kubectl"
         "fzf"
         "terraform"
-        "tmux"
         "history-substring-search"
         "zoxide"
         "jira"
