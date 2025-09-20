@@ -1,11 +1,11 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   fonts = {
     packages = with pkgs; [
       nerd-fonts.caskaydia-cove
     ];
     fontconfig = {
       defaultFonts = {
-        monospace = ["CascadiaCode Nerd Font"];
+        monospace = [ "CascadiaCode Nerd Font" ];
       };
     };
   };
@@ -46,7 +46,7 @@
     };
   };
 
-  environment.pathsToLink = ["/share/zsh"];
-  environment.shells = [pkgs.zsh];
+  environment.pathsToLink = [ "/share/zsh" ];
+  environment.shells = [ pkgs.zsh ];
   users.defaultUserShell = pkgs.zsh;
 }

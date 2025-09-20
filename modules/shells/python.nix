@@ -1,5 +1,5 @@
 # python.nix
-{pkgs ? import <nixpkgs> {}}: {
+{ pkgs ? import <nixpkgs> { } }: {
   devShell = pkgs.mkShell {
     buildInputs = with pkgs.python312Packages; [
       pkgs.python312
