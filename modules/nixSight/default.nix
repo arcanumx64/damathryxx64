@@ -1,5 +1,5 @@
-{pkgs, ...}: {
-  imports = [];
+{ pkgs, ... }: {
+  imports = [ ];
   environment.systemPackages = with pkgs; [
     grafana # For visualization
     prometheus # For metrics collection
@@ -20,33 +20,33 @@
       scrapeConfigs = [
         {
           job_name = "node";
-          static_configs = [{targets = ["localhost:9100"];}];
+          static_configs = [{ targets = [ "localhost:9100" ]; }];
         }
         {
           job_name = "prometheus";
-          static_configs = [{targets = ["localhost:9090"];}];
+          static_configs = [{ targets = [ "localhost:9090" ]; }];
         }
         {
           job_name = "process";
-          static_configs = [{targets = ["localhost:9256"];}];
+          static_configs = [{ targets = [ "localhost:9256" ]; }];
         }
         {
           job_name = "blackbox";
-          static_configs = [{targets = ["localhost:9115"];}];
+          static_configs = [{ targets = [ "localhost:9115" ]; }];
         }
         {
           job_name = "loki";
-          static_configs = [{targets = ["localhost:3100"];}];
+          static_configs = [{ targets = [ "localhost:3100" ]; }];
         }
         {
           job_name = "promtail";
-          static_configs = [{targets = ["localhost:9080"];}];
+          static_configs = [{ targets = [ "localhost:9080" ]; }];
         }
       ];
       exporters = {
         node = {
           enable = true;
-          enabledCollectors = ["systemd"];
+          enabledCollectors = [ "systemd" ];
           port = 9100;
         };
         process = {
@@ -180,7 +180,7 @@
             };
             relabel_configs = [
               {
-                source_labels = ["__journal__systemd_unit"];
+                source_labels = [ "__journal__systemd_unit" ];
                 target_label = "unit";
               }
             ];

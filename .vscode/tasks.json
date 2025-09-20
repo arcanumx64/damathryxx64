@@ -17,13 +17,6 @@
             "dependsOrder": "sequence"
         },
         {
-            "label": "Update Nix Channels",
-            "type": "shell",
-            "command": "sudo nix-channel --update",
-            "problemMatcher": [],
-            "detail": "Update Nix channels to fetch the latest package updates."
-        },
-        {
             "label": "Garbage Collect",
             "type": "shell",
             "command": "sudo nix-collect-garbage -d",
@@ -43,28 +36,6 @@
             "command": "sudo nixos-rebuild switch --rollback",
             "problemMatcher": [],
             "detail": "Rollback to the previous working configuration."
-        },
-        {
-            "label": "update",
-            "type": "shell",
-            "command": "sudo nix flake update",
-            "problemMatcher": [],
-            "detail": "Update nixos packages",
-            "dependsOn": [
-                "Update Nix Channels"
-            ],
-            "dependsOrder": "sequence"
-        },
-        {
-            "label": "git add flake.lock",
-            "type": "shell",
-            "command": "sudo git add flake.lock",
-            "problemMatcher": [],
-            "detail": "git add flake.lock if we have updates..?",
-            "dependsOn": [
-                "update"
-            ],
-            "dependsOrder": "sequence"
         }
     ]
 }
