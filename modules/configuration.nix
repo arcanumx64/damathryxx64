@@ -1,17 +1,15 @@
-{ pkgs
-, hostName ? "nixos"
-, userName ? "damathryxx64"
-, ...
-}: {
+{userName ? "damathryxx64", ...}: {
   imports = [
     ./packages
     ./shells
   ];
 
   users.users.${userName} = {
+    name = userName;
     isNormalUser = true;
+    home = "/home/${userName}";
     description = userName;
-    extraGroups = [ "wheel" "input" "docker" ];
+    extraGroups = ["wheel" "input"];
   };
 
   security.sudo = {
@@ -23,7 +21,7 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   programs = {
     nix-ld.enable = true;
