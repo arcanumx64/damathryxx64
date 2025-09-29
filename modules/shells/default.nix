@@ -1,11 +1,11 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   fonts = {
     packages = with pkgs; [
       nerd-fonts.caskaydia-cove
     ];
     fontconfig = {
       defaultFonts = {
-        monospace = [ "CascadiaCode Nerd Font" ];
+        monospace = ["CascadiaCode Nerd Font"];
       };
     };
   };
@@ -20,17 +20,12 @@
       enable = true;
       plugins = [
         "git"
-        "docker"
-        "kubectl"
         "fzf"
         "terraform"
         "history-substring-search"
         "zoxide"
         "jira"
-        "debian"
-        "dnf"
         "systemd"
-        "yum"
         "aws"
         "eza"
         "gh"
@@ -45,7 +40,7 @@
     };
   };
 
-  environment.pathsToLink = [ "/share/zsh" ];
-  environment.shells = [ pkgs.zsh ];
+  environment.pathsToLink = ["/share/zsh"];
+  environment.shells = [pkgs.zsh];
   users.defaultUserShell = pkgs.zsh;
 }
