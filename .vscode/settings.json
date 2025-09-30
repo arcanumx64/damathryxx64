@@ -1,9 +1,17 @@
 {
     "cSpell.words": [
+        "autofetch",
+        "autohide",
+        "automount",
+        "Cascadia",
+        "Consolas",
+        "damathryxx64",
+        "edolstra",
+        "Meslo",
+        "nixd",
         "nixos",
         "nixpkgs",
-        "pkgs",
-        "damathryxx64",
-        "NOPASSWD"
+        "NOPASSWD",
+        "pkgs"
     ]
 }

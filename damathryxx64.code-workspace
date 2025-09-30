@@ -51,7 +51,7 @@
         "terminal.integrated.defaultProfile.linux": "zsh",
         "terminal.integrated.cursorBlinking": true,
         "terminal.integrated.persistentSessionReviveProcess": "never",
-        "terminal.integrated.enableMultiLinePasteWarning": true,
+        "terminal.integrated.enableMultiLinePasteWarning": "always",
         // Explorer
         "explorer.excludeGitIgnore": true,
         "explorer.autoReveal": true,
