@@ -5,9 +5,7 @@
   ];
 
   users.users.${userName} = {
-    name = userName;
     isNormalUser = true;
-    home = "/home/${userName}";
     description = userName;
     extraGroups = ["wheel" "input"];
   };
