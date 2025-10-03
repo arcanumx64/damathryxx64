@@ -10,11 +10,11 @@
     nixos-wsl,
   }: let
     system = "x86_64-linux";
-    pythonEnv = import ./modules/shells/python.nix {inherit nixpkgs;};
-    devopsEnv = import ./modules/shells/devops.nix {inherit nixpkgs;};
+    pkgs = nixpkgs.legacyPackages.${system};
+    pythonEnv = import ./modules/shells/python.nix {inherit pkgs;};
+    devopsEnv = import ./modules/shells/devops.nix {inherit pkgs;};
     hostName = "nixos";
     userName = "damathryxx64";
-    pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -42,7 +42,5 @@
       python = pythonEnv.devShell;
       devops = devopsEnv.devShell;
     };
-
-    formatter.${system} = pkgs.nixpkgs-fmt;
   };
 }

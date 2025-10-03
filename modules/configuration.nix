@@ -1,4 +1,4 @@
-{userName ? "damathryxx64", ...}: {
+{ userName ? "damathryxx64", ... }: {
   imports = [
     ./packages
     ./shells
@@ -13,7 +13,7 @@
   users.users.${userName} = {
     isNormalUser = true;
     description = userName;
-    extraGroups = ["wheel" "input"];
+    extraGroups = [ "wheel" "input" ];
   };
 
   security.sudo = {
@@ -25,7 +25,7 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   programs = {
     nix-ld.enable = true;

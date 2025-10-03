@@ -1,8 +1,16 @@
 # python.nix
-{ pkgs ? import <nixpkgs> { } }: {
-  devShell = pkgs.mkShell {
-    buildInputs = with pkgs.python312Packages; [
-      pkgs.python312
+{
+  pkgs ? import <nixpkgs> {},
+  nixpkgs ? null,
+}: let
+  usedPkgs =
+    if nixpkgs != null
+    then nixpkgs
+    else pkgs;
+in {
+  devShell = usedPkgs.mkShell {
+    buildInputs = with usedPkgs.python312Packages; [
+      usedPkgs.python312
       virtualenv
       pip
       setuptools
