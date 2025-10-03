@@ -4,6 +4,82 @@
             "path": "/home/damathryxx64/repositories/"
         }
     ],
+    "extensions": {
+        "recommendations": [
+            "4ops.packer",
+            "4ops.terraform",
+            "azat-io.vscode-gruvbox-icon-theme",
+            "davidanson.vscode-markdownlint",
+            "dbaeumer.vscode-eslint",
+            "eamodio.gitlens",
+            "editorconfig.editorconfig",
+            "eraserlabs.eraserlabs",
+            "formulahendry.code-runner",
+            "foxundermoon.shell-format",
+            "github.copilot",
+            "github.copilot-chat",
+            "github.vscode-github-actions",
+            "gruntfuggly.todo-tree",
+            "hashicorp.terraform",
+            "ibm.output-colorizer",
+            "jdinhlife.gruvbox",
+            "jnoortheen.nix-ide",
+            "kamadorueda.alejandra",
+            "kevinrose.vsc-python-indent",
+            "mads-hartmann.bash-ide-vscode",
+            "ms-python.debugpy",
+            "ms-python.python",
+            "ms-python.vscode-pylance",
+            "ms-python.vscode-python-envs",
+            "oderwat.indent-rainbow",
+            "redhat.ansible",
+            "redhat.vscode-yaml",
+            "standard.vscode-standard",
+            "streetsidesoftware.code-spell-checker",
+            "tal7aouy.icons"
+        ]
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Rebuild Configuration (Flake)",
+                "type": "shell",
+                "command": "sudo nixos-rebuild switch --flake /home/damathryxx64/repositories/damathryxx64#nixos",
+                "problemMatcher": [],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                },
+                "detail": "Rebuild and apply the current NixOS configuration using flakes.",
+                "dependsOn": [
+                    "git add flake.lock"
+                ],
+                "dependsOrder": "sequence"
+            },
+            {
+                "label": "Garbage Collect",
+                "type": "shell",
+                "command": "sudo nix-collect-garbage -d",
+                "problemMatcher": [],
+                "detail": "Remove old generations and clean up unused packages."
+            },
+            {
+                "label": "Check Configuration (Flake)",
+                "type": "shell",
+                "command": "nixos-rebuild build --flake /home/damathryxx64/repositories/damathryxx64#nixos",
+                "problemMatcher": [],
+                "detail": "Check the current NixOS flake configuration without applying changes."
+            },
+            {
+                "label": "Rollback",
+                "type": "shell",
+                "command": "sudo nixos-rebuild switch --rollback",
+                "problemMatcher": [],
+                "detail": "Rollback to the previous working configuration."
+            }
+        ]
+    },
     "settings": {
         // Editor Font & Display
         "editor.fontFamily": "'Cascadia Code NF', Consolas, 'Courier New', 'MesloLGS NF', monospace",
@@ -101,10 +177,6 @@
         "files.watcherExclude": {
             "**/target": true
         },
-        "terminal.integrated.fontFamily": "'Cascadia Code NF', Consolas, 'Courier New', 'MesloLGS NF', monospace",
-        "cSpell.words": [
-            "agnoster",
-            "pkgs"
-        ]
+        "terminal.integrated.fontFamily": "'Cascadia Code NF', Consolas, 'Courier New', 'MesloLGS NF', monospace"
     }
 }
