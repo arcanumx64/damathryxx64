@@ -4,6 +4,12 @@
     ./shells
   ];
 
+  # Enable needed services for VS Code Remote Development
+  services.openssh.enable = true;
+  networking = {
+    firewall.enable = true;
+  };
+
   users.users.${userName} = {
     isNormalUser = true;
     description = userName;
