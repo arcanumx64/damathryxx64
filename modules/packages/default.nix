@@ -1,24 +1,20 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     # CLI Development Tools
     vim
     gcc
-    gh
     nixd
     clang
-    git
+    gh
 
     # CLI Utilities
     tree
     unzip
-    eza # Modern replacement for ls
-    zoxide # Directory navigation
-    bat # Modern replacement for cat
     fd # Modern replacement for find
     ripgrep # Modern replacement for grep
-    fzf # Fuzzy finder
     ripgrep
-    starship
+    fzf
+    eza
 
     htop
     fastfetch # System information display
