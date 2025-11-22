@@ -22,11 +22,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1763587902,
-        "narHash": "sha256-kYhcVG34C5MThK6JQp2UeGTooFgi3XEElGk2TNFcTWg=",
+        "lastModified": 1763738061,
+        "narHash": "sha256-VpNRcInaj1MOya8NmcqhFmdO7KGO7SSZelJQmPl6HoQ=",
         "owner": "nix-community",
         "repo": "NixOS-WSL",
-        "rev": "cce7a45e8fb3398f669bfd54aaa15047e70c81a8",
+        "rev": "3bcc267c4e0efa023b98b9c5cfbe11b88ec2dc8f",
         "type": "github"
       },
       "original": {
